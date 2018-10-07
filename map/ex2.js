@@ -39,10 +39,17 @@ En sortie: [
   'Tofu is suitable for vegetarians',
   'Chick Pea is suitable for vegetarians'
 ]
-
  */
 
 function getFoodCategories(foods) {
+  return foods.map( (food) => {
+    if ( food.isVegetarian){
+     return food.food + ' is suitable for vegetarians'
+    }else {
+      return food.food + ' is not suitable for vegetarians'
+    }
+  })
+
 }
 
 
